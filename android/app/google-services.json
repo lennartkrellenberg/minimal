@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1049464365845",
+    "firebase_url": "https://qrhouse-b8513-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "qrhouse-b8513",
+    "storage_bucket": "qrhouse-b8513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049464365845:android:bb98c1f29381e721fd7f1c",
+        "android_client_info": {
+          "package_name": "com.example.minimal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049464365845-b4357i52r52kqfboke4ckmttm29a8vj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjGl1_LENb8N9ge_RzfxoJ_OcfGD0tuBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049464365845-b4357i52r52kqfboke4ckmttm29a8vj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
