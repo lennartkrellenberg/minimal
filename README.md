@@ -1,4 +1,4 @@
-# travler
+# minimal
 
 A to-do list that can be used at any time and on any device thanks to Firebase and Flutter
 
