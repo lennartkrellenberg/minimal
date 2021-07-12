@@ -10,8 +10,8 @@ Future<void> addUser(name, email, uid) {
     "toDoText": "first To-Do",
     "category": "Work",
     "priority": "Low",
-    "categoryColor": "yellow",
-    "priorityColor": "green"
+    "categoryColor": "0xFFF6CE06",
+    "priorityColor": "0xFF18CC36"
   });
 
   return users

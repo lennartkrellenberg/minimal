@@ -22,7 +22,7 @@ class _ToDoItemState extends State<ToDoItem> {
   Widget build(BuildContext context) {
     return Container(
         height: 90,
-        width: 380,
+        width: (MediaQuery.of(context).size.width),
         alignment: Alignment.center,
         decoration: new BoxDecoration(
             border: Border.all(color: Color.fromRGBO(68, 68, 68, 1)),
@@ -45,6 +45,7 @@ class _ToDoItemState extends State<ToDoItem> {
                   ],
                 ),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
