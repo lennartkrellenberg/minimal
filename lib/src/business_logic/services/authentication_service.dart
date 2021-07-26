@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:minimal/src/business_logic/services/database_service.dart';
 
 class AuthenticationService {
@@ -24,7 +25,17 @@ class AuthenticationService {
           email: email, password: password);
       String userId = (FirebaseAuth.instance.currentUser.uid);
       addUser(name, email, userId);
-      return "Signed In";
+      return "User registred";
+    } on FirebaseAuthException catch (e) {
+      return e.message;
+    }
+  }
+
+  Future<String> firebaseSignIn({String email, String password}) async {
+    try {
+      await _firebaseAuth.signInWithEmailAndPassword(
+          email: email, password: password);
+      return "loggedIn";
     } on FirebaseAuthException catch (e) {
       return e.message;
     }

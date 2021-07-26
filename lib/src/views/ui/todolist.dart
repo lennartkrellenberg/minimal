@@ -37,7 +37,8 @@ class ToDoList extends StatelessWidget {
                     snapshot.data.docs.removeAt(index);
 
                     String id = snapshot.data.docs[index]["id"];
-                    print(uid);
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(SnackBar(content: Text(uid + " " + id)));
                     RemoveToDo(uid, id);
                     ScaffoldMessenger.of(context);
                   },

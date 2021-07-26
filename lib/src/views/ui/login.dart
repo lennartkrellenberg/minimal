@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:minimal/src/business_logic/services/authentication_service.dart';
+import 'package:minimal/src/views/ui/signIn.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
@@ -25,7 +27,11 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Center(child: Text("minimal"))),
+          centerTitle: true,
+          title: Text("minimal",
+              style: TextStyle(
+                color: Colors.black,
+              )),
           backgroundColor: Color(0x00000000),
           elevation: 0,
         ),
@@ -120,7 +126,16 @@ class _LoginPageState extends State<LoginPage> {
                                   : _validatePassword = false;
                             });
                           },
-                          child: Text("Sign Up")))
+                          child: Text("Regestrieren"))),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  new GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => SignIn()));
+                      },
+                      child: Text("Schon regestriert?"))
                 ],
               ),
             ))));

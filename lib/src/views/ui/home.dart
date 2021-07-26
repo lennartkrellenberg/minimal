@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:minimal/src/business_logic/services/authentication_service.dart';
 import 'package:minimal/src/views/ui/createToDoView.dart';
+import 'package:minimal/src/views/ui/login.dart';
 import 'package:minimal/src/views/ui/todolist.dart';
 import 'package:provider/provider.dart';
 
@@ -28,12 +29,11 @@ class _MyHomePageState extends State<MyHomePage> {
     var scaffold = Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Center(
-            child: Center(
-                child: Text(
+        centerTitle: true,
+        title: Text(
           "minimal",
           style: TextStyle(color: Colors.black),
-        ))),
+        ),
         backgroundColor: Color(0x00000000),
         elevation: 0,
       ),
@@ -92,7 +92,13 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: ElevatedButton(
-      onPressed: () => context.read<AuthenticationService>().logOut(),
+      onPressed: () {
+        context.read<AuthenticationService>().logOut();
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text("User wurde ausgeloggt")));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => LoginPage()));
+      },
       child: Text("Ausloggen"),
     ));
   }
